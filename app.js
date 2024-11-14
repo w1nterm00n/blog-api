@@ -3,11 +3,8 @@ const app = express();
 const router = require("./routes/router");
 const { v4: uuidv4 } = require("uuid");
 app.use(express.json());
-//app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-	res.send("Hello World");
-});
+app.use("/", router);
 
 //настройка порта
 const PORT = 3088;
